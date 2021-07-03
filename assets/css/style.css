@@ -1,0 +1,427 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+.main{
+
+}
+.white{
+    color: white !important;
+}
+.clear{
+    clear:both;
+}
+
+.header{
+height:46px;
+background-color: black;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1;
+
+}
+#nav {
+    display: inline-block;
+}
+#nav > li {
+    display:inline-block;
+    position: relative; 
+   
+}
+#nav li:hover .subnav li{
+     display: block;
+ }
+#nav> li> a{    
+     display:inline-block;
+     color:white;
+     text-transform: uppercase;
+}
+#nav li a{
+    
+     text-decoration:none;
+     /* light-height:chiều cao đường chứa chữ 
+     tác dụng: căn giữa chữ vào thanh theo chiều cao*/
+     line-height: 46px;    
+     padding:0 24px;
+
+     
+}
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    background-color: #ccc;
+    color:black;
+  
+}
+#nav .subnav{
+    list-style-type: none;
+    position:absolute;
+    top:100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px  rgba(0, 0,0, 0.5);
+    width:180%;
+}
+#nav .subnav li{
+    display:none;
+    
+    
+
+}
+#nav .subnav a{
+    color:black;
+    display: block;
+}
+#nav .nav-down{
+    font-size: 14px;
+}
+.header .mobile-menu,
+.header .search-button{
+      float: right;
+}
+
+.header .menu-btn,
+.header .search-icon{
+    color:#fff;
+    line-height: 46px;
+    padding: 0 21px;
+
+  
+}
+.header .mobile-menu:hover {
+    background-color:#ccc;
+    
+}
+.header .mobile-menu:hover .menu-btn{
+    color:black;
+}
+.header .search-button:hover {
+    background-color: #f44336;
+}
+.header .mobile-menu {
+    position: absolute;
+    top:0;
+    right:0;
+}
+.slider{
+
+   
+    background-color: #eee;
+    margin-top: 46px;
+    padding-top:50%;
+    position: relative;
+    background: url(/assets/img/slider/slider1.jpg) top center / cover no-repeat;
+}
+.slider .text-content{
+    position:absolute;
+    bottom: 10%;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.slider .text-heading{
+
+}
+
+.slider .text-description{
+
+}
+
+
+.content{
+
+}
+.content .content-section{
+    width: 800px;
+    max-width:100%;
+    /* Tương thích với mà hình kích thước nhỏ hơn 800px */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content .section-heading{
+    text-align: center;
+    letter-spacing: 1.6px;
+    font-weight: 500;
+
+}
+
+
+.content .section-subheading{
+    text-align: center;
+    font-style: italic;
+    opacity: 0.5;
+    margin-top: 25px;
+}
+
+.content .section-about{
+    margin-top: 25px;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.content .member-list{
+margin-top:48px;
+overflow: hidden;
+}
+
+.content .member-item{
+float:left;
+text-align: center;
+width:33.33333%;
+}
+
+.content .member-name{
+
+}
+.content .member-img{
+    width:154px;
+    border-radius: 5px;
+    margin-top:15px;
+}
+
+.buy-tickets{
+    background-color: black;
+}
+.month{
+    background-color: #fff;
+    list-style: none;
+    margin-top: 50px;
+}
+.month li{
+    padding: 5px 6px;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+}
+.month .sold-out{
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 5px;
+}
+
+.month .quantity{
+    float: right;
+    background-color: black;
+    color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+}
+.places-list{
+    margin: 32px -8px;
+
+    overflow: hidden;
+
+}
+.place-body{
+    background-color: white;
+    font-size: 15px;
+    padding:16px;
+}
+.place-img{
+width:100%;
+display: block;
+
+}
+
+.place-item{
+float:left;
+width:33.3333%;
+padding: 0 8px;
+}
+.city{
+
+}
+.times{
+margin-top:15px;
+}
+.place-discription{
+margin-top:15px;
+
+}
+
+.places-list .buy-tickets{
+color:white;
+background-color:black;
+text-decoration: none;
+padding:8px 16px;
+display: inline-block;
+margin-top: 15px;
+}
+.places-list .buy-tickets:hover{
+    background-color: #ccc;
+    color:black;
+}
+.row{
+    margin:0 -8px;
+
+}
+.contact-content{
+    margin-top:48px;
+}
+.contact-content a{
+    opacity: 0.8;
+}
+.contact-content a:hover{
+    opacity: 1;
+}
+.col{
+    float:left;
+    padding:0 8px;
+}
+.col-half{
+    width:50%;
+}
+.col-full{
+    width:100%;
+}
+.text-control{
+    width:100%;
+    padding: 10px 3px;
+}
+.mess{
+    margin-top:8px;
+}
+.row::after{
+
+    content:"";
+    
+    display:block;
+    
+    clear:both;
+    
+    }
+    .contact-infor{
+        line-height: 1.5;
+        font-size: 18px;
+    }
+    .contact-infor i{
+        width:30px;
+    }
+.submit{
+    margin-top:16px;
+    color:white;
+    background-color:black;
+    border:none;
+    padding: 11px 17px;
+    float:right;
+}
+.submit:hover{
+    color:black;
+    background-color:#ccc;
+}
+.map{
+    width:100%;
+}
+.footer{
+    margin-top:48px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.footer .social-contact a{
+    text-decoration: none;
+    color:#666;
+    font-size:20px;
+    
+}
+.footer .social-contact a:hover{
+    color:#888;
+}
+.footer .source ,
+.footer .source a
+{
+    
+    color:#666;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 46.1875em)
+{    #nav{
+    display: block;
+} 
+    #nav> li> a {
+         display: block;
+}
+    #nav > li{
+        display:block;
+    }
+
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    .header .search-button{
+        display:none;
+    }
+    .header{
+        overflow: hidden;
+    }
+    .content .member-item {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .content .member-img {
+        width: 230px;
+        margin-bottom: 16px;
+    }
+    .content .section-heading{
+        font-size: 30px;
+    }
+    .place-item{
+        width:100%;
+    }
+    .city {
+        font-size: 15px;
+    }
+    .col-half {
+        width: 100%;
+    }
+    .col {
+        /* float: left; */
+        padding: 0 8px;
+        /* width: 100%; */
+        margin-bottom: 10px;
+    }
+    .places-list .buy-tickets {
+      
+        padding: 11px 16px;
+        display: block;
+       
+        text-align: center;
+    }
+    
+
+    .submit{
+        width:100%;
+    }
+}
+@media only screen and (min-width: 46.25em) 
+{
+    .header .mobile-menu{
+        display: none;
+    }
+    .contact-infor {
+        line-height: 1.7;
+        
+    }
+    .footer .social-contact a {
+       
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .footer .source, .footer .source a {
+        
+        font-size: 20px;
+        line-height: 2;
+    }
+}
