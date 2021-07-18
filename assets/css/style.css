@@ -6,6 +6,8 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior:smooth;
+    /* làm mượt khi cuộn
+     */
 }
 .main{
 
@@ -46,7 +48,7 @@ z-index: 1;
 #nav li a{
     
      text-decoration:none;
-     /* light-height:chiều cao đường chứa chữ 
+     /* line-height:chiều cao đường chứa chữ 
      tác dụng: căn giữa chữ vào thanh theo chiều cao*/
      line-height: 46px;    
      padding:0 24px;
@@ -115,7 +117,7 @@ z-index: 1;
     margin-top: 46px;
     padding-top:50%;
     position: relative;
-    background: url(/assets/img/slider/slider1.jpg) top center / cover no-repeat;
+    background: url(../img/slider/slider1.jpg) top center / cover no-repeat;
 }
 .slider .text-content{
     position:absolute;
@@ -190,6 +192,9 @@ width:33.33333%;
 
 .buy-tickets{
     background-color: black;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 .month{
     background-color: #fff;
@@ -345,6 +350,164 @@ margin-top: 15px;
     color:#666;
     font-size: 15px;
 }
+.modal{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    display: none;
+}
+.modal-container{
+    background-color: white;
+    margin: auto;
+    position: relative;
+    width: 900px;
+    min-height: 300px;
+    animation:  modalFadeIn linear 0.2s;
+}
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.modal-container-close{
+    position: absolute;
+    top:0;
+    right:0;
+    color: white;
+    padding: 14px 16px;
+    
+
+}
+
+.modal__close-icon{
+
+}
+.modal-header{
+    text-align: center;
+    font-size: 30px;
+    background-color: #009688;
+    color:white;
+    height:130px;
+    line-height: 130px;
+}
+
+.modal-header__icon{
+    font-size: 28px;
+
+}
+
+.modal-header__heading{
+    letter-spacing: 4px;
+    margin-left: 8px;
+}
+.modal-body{
+    background-color: white;
+    padding: 0 15px;
+}
+
+
+.modal-body__label{
+    display: block;
+    font-size: 15px;
+    margin: 16px 0;
+
+}
+
+
+.modal-body__label--icon{
+    font-size: 12px;
+}
+
+.modal-body__label-dis{
+    color:#222;
+}
+.label-body__input{
+    padding: 8px;
+    width: 100%;
+}
+.input-pay{
+    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #009688;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+}
+
+
+
+.input-pay__icon{
+    font-size: 12px;
+
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-bottom: 8px;
+
+}
+
+
+.modal-footer__close{
+
+    margin: 16px 0;
+}
+.modal-footer__close-link{
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    text-transform: capitalize;
+    font-size: 15px;
+
+}
+.modal-footer__close-icon{
+
+
+}
+.modal-footer-help{
+
+    margin: 15px 0;
+    font-size: 15px;
+}
+.modal-footer-need{
+
+
+}
+.modal-footer-help-link{
+
+    color: #2196f3;
+
+}
+.input-pay:hover,
+.modal-footer__close-link:hover,
+.modal-container-close:hover{
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
 
 @media only screen and (max-width: 46.1875em)
 {    #nav{

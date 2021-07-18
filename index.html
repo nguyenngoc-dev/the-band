@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css" rel="stylesheet">
+
     <!-- Tạo icon cho domain -->
     <link rel="icon" href="./assets/img/slider/slider1.jpg" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="./assets/themify-font/themify-icons/themify-icons.css">
@@ -16,7 +16,7 @@
     <div class="main">
         <div id="header"class="header">
             <ul id="nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -82,7 +82,7 @@
                    
                 </div> <div class="clear"></div>
             </div>
-            <div class="buy-tickets">
+            <div class="buy-tickets" >
                 <div id="tour"class="content-section">
                     <h2 class="section-heading white">
                         TOUR DATES
@@ -104,7 +104,7 @@
                             <h2 class="city">New York</h2>
                             <p class="times">Fri 27 Nov 2016</p>
                             <p class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="" class="buy-tickets">Buy Tickets</a>
+                            <button  class="buy-tickets js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                             <div class="place-item">
@@ -114,7 +114,7 @@
                                 <h2 class="city">Paris</h2>
                                 <p class="times">Sat 28 Nov 2016</p>
                                 <p class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="buy-tickets">Buy Tickets</a>
+                                <button  class="buy-tickets js-buy-ticket">Buy Tickets</button>
                               </div>
                             </div>
                             <div class="place-item">
@@ -124,7 +124,7 @@
                                 <h2 class="city">San Francisco</h2>
                                 <p class="times">Sun 29 Nov 2016</p>
                                 <p class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="buy-tickets">Buy Tickets</a>
+                                <button  class="buy-tickets js-buy-ticket">Buy Tickets</button>
                             </div>
                             </div>
                     </div>
@@ -183,6 +183,57 @@
                 <a href="#">w3.css</a>
             </p>
         </div>
+        <div class="modal" id="modal-container">
+            <div class="modal-container" >
+                <div class="modal-container-close" id="close-modal">
+                    <i class="fas fa-times modal__close-icon"></i>
+
+                </div>
+                <header class="modal-header">
+                    <i class="fas fa-suitcase modal-header__icon"></i>
+                    <span class="modal-header__heading">
+                        Tickets
+                    </span>
+
+                </header>
+                <div class="modal-body">
+                    <label for="" class="modal-body__label">
+                        <i class="fas fa-shopping-cart modal-body__label--icon "></i>
+                        <span class="modal-body__label-dis">
+                            Tickets, $15 per person
+                        </span>
+                    </label>
+                    <input type="text" class="label-body__input" placeholder="How many?">
+                    <label for="" class="modal-body__label">
+                        <i class="fas fa-user modal-body__label--icon "></i>
+                        <span class="modal-body__label-dis">
+                            Send To
+                        </span>
+                    </label>
+                    <input type="email" class="label-body__input" placeholder="Enter email">
+                    <button class="input-pay">
+                        Pay
+                        <i class="fas fa-check input-pay__icon"></i>
+                    </button>
+                </div>
+                <footer class="modal-footer">
+                    <div class="modal-footer__close">
+                        <a href="" class="modal-footer__close-link">
+                            close
+                            <i class="fas fa-times modal-footer__close-icon"></i>
+                        </a>
+                    </div>
+                    <div class="modal-footer-help">
+                        <span class="modal-footer-need">
+                            Need
+                        </span>
+                        <a href="" class="modal-footer-help-link">
+                            help?
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
     </div>
     <script>
         var header=document.getElementById("header");
@@ -208,6 +259,30 @@
            }
        }
 
+    </script>
+    <script>
+        var buyBtns = document.getElementsByClassName('js-buy-ticket');
+        for(var buyBtn of buyBtns)
+        {
+            buyBtn.addEventListener('click', function(){
+                document.getElementById('modal-container').style.display='flex';
+            })
+        }
+        var close=document.getElementById('close-modal');
+        close.onclick=function(){
+            document.getElementById('modal-container').style.display='none';
+        }
+        //  chọn vào thẻ có class= 'modal'
+        // lưu ý phải thêm chấm khi dùng query
+        var modal=document.querySelector('.modal');
+        modal.addEventListener('click',function(){
+            document.getElementById('modal-container').style.display='none';
+        })
+        var modalContainer = document.querySelector('.modal-container');
+    //    ngăn tính chất nổi bọt khi click vào trong container
+        modalContainer.addEventListener('click', function(event){
+            event.stopPropagation();
+        })
     </script>
 </body>
 </html>
